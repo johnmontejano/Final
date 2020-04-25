@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="On-site Handheld Devices Repair and Troubleshooting.">
+  <meta name="keywords" content="HTML,CSS">
+  <meta name="author" content="Gilbert Montejano">
+  <link rel="stylesheet" type="text/css" href="MontejanoStyleSheet.css">
+<title>Mobile Repair Ambulance</title>
+</head>
+
+<body>
+
+<!--Website title-->
+<h1 class="awesome">Mobile Repair Ambulance</h1>
+
+
+<div class="center">
+<h4><span class="italictext">Fast & easy solution to mobile repairs</span></h4>
+<!--Navigation Bar-->
+	<ul>
+		<li><a href="MontejanoHomePage.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		<li><a class="active" href="RegistrationForm.html">Registration</a></li>
+	</ul>
+</div>	
+
+
+	<!--I've added a Registraion Form that will allow user to register to our site-->
+	<h1>Registration Form</h1>
+	<div class="centerForm">
+	<div class="containerForm">
+	  <form autocomplete="on">
+	  First Name:<input autofocus required type="text" name="firstname" Placeholder="Your first name..." maxlength="10"><br>
+	  Last Name:<input required type="text" name="lastname" placeholder="Your last name..."  maxlength="10"><br>
+	  E-mail: <input type="email" name="email" placeholder="user@domain.com" pattern="^.+@.+$" required ><br>
+	  Username:<input required type="text" name="username" placeholder="Username with 2-15 chars..." pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,15}$"><br>
+	
+	
+	
+	<!--Input Type Password / JavaScript Validation-->
+	<label for="psw">Password</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+	  
+		<div id="message">
+		<h4>Password must contain the following:</h4>
+		<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+		<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+		<p id="number" class="invalid">A <b>number</b></p>
+		<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+		</div>  
+	 
+	<script>
+	var myInput = document.getElementById("psw");
+	var letter = document.getElementById("letter");
+	var capital = document.getElementById("capital");
+	var number = document.getElementById("number");
+	var length = document.getElementById("length");
+
+	// When the user starts to type something inside the password field
+	myInput.onkeyup = function() {
+	  // Validate lowercase letters
+	  var lowerCaseLetters = /[a-z]/g;
+	  if(myInput.value.match(lowerCaseLetters)) {  
+		letter.classList.remove("invalid");
+		letter.classList.add("valid");
+	  } else {
+		letter.classList.remove("valid");
+		letter.classList.add("invalid");
+	  }
+	  
+	  // Validate capital letters
+	  var upperCaseLetters = /[A-Z]/g;
+	  if(myInput.value.match(upperCaseLetters)) {  
+		capital.classList.remove("invalid");
+		capital.classList.add("valid");
+	  } else {
+		capital.classList.remove("valid");
+		capital.classList.add("invalid");
+	  }
+
+	  // Validate numbers
+	  var numbers = /[0-9]/g;
+	  if(myInput.value.match(numbers)) {  
+		number.classList.remove("invalid");
+		number.classList.add("valid");
+	  } else {
+		number.classList.remove("valid");
+		number.classList.add("invalid");
+	  }
+	  
+	  // Validate length
+	  if(myInput.value.length >= 8) {
+		length.classList.remove("invalid");
+		length.classList.add("valid");
+	  } else {
+		length.classList.remove("valid");
+		length.classList.add("invalid");
+	  }
+	}
+	</script>
+
+
+
+	<!--Input Type File-->
+	Profile Picture:<input type="file" name="myfile"><br><br>
+	Phone Number:<input required type="tel" name="phone" placeholder="Format: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="14"><br>
+	  
+	<!--Input Type Range-->
+	How likely are you to refer us to a friend: 0 <input type="range" name="sat-level" min="0" max="10" value="5"> 10 <br><br>
+	    
+	<!--Button input type--><input type="button" onclick="alert('Thank you for completing your registration!')" value="Click Me!"><br><br>
+	  
+	  
+	<!--Checkbox input type-->
+	<input required type="checkbox" name="Confirm"><b>I confirm that the information given in this form is true, complete and accurate</b><br><br>
+	  
+	  
+	<!--Sumbit input type-->
+	<button type="submit" formaction="http://ss1.ciwcertified.com/cgi-bin/process.pl">Submit Form</button>
+	
+	<!--Reset input type-->
+	<input type="reset" value="Reset">
+	  </form>
+	</div>
+	</div>
+
+
+<!--I've provided additional navigation page links on the bottom of page-->
+<footer>
+	<div class="footer">
+	<a href="MontejanoHomePage.html">Home</a> |
+	<a href="About.html">About</a> |
+	<a href="ContactUs.html">Contact Us</a> |
+	<a href="RegistrationForm.html">Registration</a>
+	<p><span class="italictext">&#169;2020 Mobile Repair Ambulance&#174;. All rights reserved.</span></P>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
+	  

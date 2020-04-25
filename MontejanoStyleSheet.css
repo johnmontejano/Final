@@ -1,0 +1,252 @@
+/*Navigation Bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+nav {
+  display: block;
+}
+
+
+
+/*Adds colorchange animation to website name */ 
+.awesome {
+      
+      font-family: futura;
+      font-style: italic;
+      
+      width:100%;
+      text-align: center;
+      margin: 40px;
+     
+      
+      
+      font-size:50px;
+      font-weight: bold;
+   
+      -webkit-animation:colorchange 0.5s infinite alternate;
+      
+      
+    }
+
+@-webkit-keyframes colorchange {
+      0% {
+        
+        color: red;
+      }
+      
+      100% {
+        
+        color: white;
+      }
+
+    }
+	
+
+
+/* 3D Transform */	
+.container{
+	width: 445px;
+    height: 295px;
+    perspective: 1500px;
+  	border:5px solid 		#71bb9d;
+    background:	rgb(240,255,240);
+	margin: auto;
+}
+.transformed {
+    -webkit-transform: translate3d(25px, 25px, 50px); /* Chrome, Safari, Opera */
+    transform: translate3d(40px, 40px, 50px); /* Standard syntax */
+}
+
+
+/* Adds background color, padding, and font-family */
+body {
+  padding: 74px;
+  background-color: #99e6b3;
+  border: 15px dotted #000000;
+  background-clip: padding-box; 
+  height: auto;
+  margin: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Website title styling */
+h1{
+	color: black;
+	text-align: center;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 50px;
+	padding: 5px 1px;
+	text-transform: uppercase;
+}
+
+/* adds border to h2 sections */
+h2{
+	border: solid black;
+	border-width: 1px 4px
+}
+
+H4{
+
+    font-size: 17px;
+	font-weight:normal;
+	margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+/* font styling for paragraphs*/
+p{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+}
+
+/*Italics styling*/ 
+span.italictext{
+    font-style: italic;
+}
+
+/*main tag padding*/
+main { 
+padding: 30px; 
+}
+
+/* Centers website contents */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+/* Footer Styling */
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding:50px 10px 0px;
+   text-align: center;
+} 
+
+
+
+/*Section Tag*/
+section {
+  display: block;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],[type=email],[type=date],[type=password],[type=tel], select, textarea {
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize:vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Add a background color and some padding around the form */
+.containerForm{
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
+/* Centers form contents */
+.centerForm {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+/* drag and drop & website icon */
+#div1 {
+  width: 89px;
+  height: 70px;
+  padding: 1px;
+  border: 1px solid #aaaaaa;
+}
+
+/* aside for onclick event*/
+aside {
+    width: 10%;
+    padding-left: 10px;
+    margin-left: .5px;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+
+
+
+/*Password message*/
+#message p {
+  padding: 5px 35px;
+  font-size: 15px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}

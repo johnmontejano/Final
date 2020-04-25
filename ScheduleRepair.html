@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="On-site Handheld Devices Repair and Troubleshooting.">
+  <meta name="keywords" content="HTML,CSS">
+  <meta name="author" content="Gilbert Montejano">
+  <link rel="stylesheet" type="text/css" href="MontejanoStyleSheet.css">
+  <title>Mobile Repair Ambulance</title>
+
+	<script>
+function populate(s1,s2,s3){
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	var s3 = document.getElementById(s3);
+	s2.innerHTML = "";
+	if(s1.value == "iPhone"){
+		var optionArray = ["|","iphone 11 pro max|iPhone 11 Pro Max","iphone 11 pro|iPhone 11 Pro","iphone 11|iPhone 11","iphone xs max|iPhone Xs Max","iphone xs|iPhone Xs","iphone xr|iPhone XR"];
+	} else if(s1.value == "Samsung"){
+		var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
+	  else if(s1.value == "
+	}
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+		s3.options.add(newOption);
+	}
+}
+</script>
+</head>
+
+<body>
+
+
+<!--Website title-->
+<h1 class="awesome">Mobile Repair Ambulance</h1>
+
+
+<div class="center">
+<h4><span class="italictext">Fast & easy solution to mobile repairs</span></h4>
+<!--Navigation Bar-->
+	<ul>
+		<li><a href="MontejanoHomePage.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		<li><a class="active" href="RegistrationForm.html">Registration</a></li>
+	</ul>
+</div>	
+
+<h1>Schedule Repair</h1>
+	<div class="centerForm">
+	<div class="containerForm">
+	  <form autocomplete="on">
+	  
+	  
+
+<label for="device">Select Device:</label>
+<select id="slct1" name="slct1" onchange="populate(this.id,'slct2','slot3')">
+  <option value=""></option>
+  <option value="iPhone">iPhone</option>
+  <option value="Samsung">Samsung</option>
+
+</select>
+
+Select Model:
+<select id="slct2" name="slct2"></select>
+
+Select Problem:
+<select id="slot3" name="slot3"></select>
+
+
+	  
+	  
+	  First Name:<input autofocus required type="text" name="firstname" Placeholder="Your first name..." maxlength="10"><br>
+	  Last Name:<input required type="text" name="lastname" placeholder="Your last name..."  maxlength="10"><br>
+		  
+</body>
+</html>

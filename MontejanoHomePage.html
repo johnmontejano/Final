@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="On-site Handheld Devices Repair and Troubleshooting.">
+  <meta name="keywords" content="HTML,CSS">
+  <meta name="author" content="Gilbert Montejano">
+  <link rel="stylesheet" type="text/css" href="MontejanoStyleSheet.css">
+  
+<title>Mobile Repair Ambulance</title>
+
+<!--HTML5/JavaScript drag-and-drop API-->
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<!--Contains Drag and Drop paragraph & web site icon that user can drag into box-->
+<p><b>Drag the websites icon into the box:</b></p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="../Week7Website/Images/ambulance.png" alt="ambulance" draggable="true" ondragstart="drag(event)" width="90" height="70">
+
+<!--Contains an image that is transformed with CSS3 3D -->
+<div class="container">
+<img style="width:445px;" src="../Week7Website/Images/MobileRepair.jpg" alt="Mobile Repair" class="transformed">
+</div>
+</header>
+
+
+<!--website title with color change animmation-->
+<h1 class="awesome">Mobile Repair Ambulance</h1>
+
+
+<!--Adds JavaScript onclick event within an <aside> tag -->
+<aside>
+<p id="demo"></p>
+<button onclick="myFunction()">Click me</button>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "*<b>First Time Customers*</b> Please visit our Contact Us page and send us a message to recieve 15% off your first order!";
+}
+</script>
+</aside>
+
+
+<div class="center">
+<h4><span class="italictext">Fast & easy solution to mobile repairs</span></h4>
+<!--Navigation Bar-->
+<nav>
+	<ul>
+		<li><a class="active" href="MontejanoHomePage.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		<li><a href="RegistrationForm.html">Registration</a></li>
+	</ul>
+</nav>
+</div>	
+
+<main>
+	<div class="center">
+	<section>
+	<h2>Our Mission</h2> <!--Our Mission Paragraph-->
+	<p>Mobile Repair Ambulance believes that mobile repair should be something that anyone can have done without having to take time out of your day to do so. Instead of having to deal with taking time out of your day to drive across town to have your phone repaired, you can leave the driving to us and have your phone repaired where ever you are located. Whether it's at your home, job, or your in-laws, Mobile Repair Ambulance has you covered. <span class="italictext"><b>Se Habla Espanol!</b></span>
+	</section>
+	
+    <!--I discuss how our company operates-->
+	<article>
+	<h2>How it Works</h2>
+	<p><b><span class="italictext">First</span></b>, the user must book an appointment, where they will specify which time and location best suit their schedule to have their device repaired. </p>
+	<p><b><span class="italictext">Secondly</span></b>, a certified technician will come to your location and repair your device on-spot, in their mobile repair vehicle or any other preferred location.</p>
+	<p><b><span class="italictext">And Finally</span></b>, after the repair is complete, the technician will ensure that the phone is working correctly in front of the client. The client then will have the option to pay via credit card, PayPal, or cash. </p>	
+	</article>
+	<!-- I go over why user should choose us over others-->
+	<article>
+	<h2>Why Choose Us?</h2>
+	<p><b><span class="italictext">We'll Save You Time</span></b> - You won't have to go out of your way to bring your phone to us, as our trained technicians will come to your preferred location. </p>
+	<P><b><span class="italictext">Reliable & Fast</span></b> - Our technicians will have your phone up and running within 30 minutes or less!</p>
+	<p><b><span class="italictext">Quality Parts</span></b> - We use only quality parts to ensure that our customers will leave satisfied every time. We are so confident that you'll think the same about our parts, or we guarantee you your money back!</p>
+	</article>
+	</div>
+</main>	
+
+
+<!--I've provided additional navigation page links on the bottom of page-->
+<footer>
+	<div class="footer">
+	<a href="MontejanoHomePage.html">Home</a> |
+	<a href="About.html">About</a> |
+	<a href="ContactUs.html">Contact Us</a> |
+	<a href="RegistrationForm.html">Registration</a>
+	<p><span class="italictext">&#169;2020 Mobile Repair Ambulance&#174;. All rights reserved.</span></P>
+	</div>
+</footer>
+	
+
+</body>
+</html>
+	
